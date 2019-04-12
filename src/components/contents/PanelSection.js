@@ -1,5 +1,5 @@
 import React from 'react';
-import Divider from '@material-ui/core/Divider';
+
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -12,13 +12,16 @@ class PanelSection extends React.Component{
             <div className={classes.root}>
                 <Grid container  spacing={16} >
                     <Grid item xs={12}>
-                        <Typography variant = "h5">
-                            {this.props.title}
-                        </Typography>
-                        <br/>
-                        <Paper className={classes.paper}>em Breve!</Paper>
-                        <br/>
-                        <Divider/>
+                        <Paper className={classes.paper} elevation={1}>
+                            <Typography variant = "h6">
+                                {this.props.title}
+                            </Typography>
+                            <br/>
+                            <Typography component="p">
+                                Em Breve!
+                            </Typography>
+                        </Paper>
+                        
                     </Grid>
                 </Grid>
             </div>

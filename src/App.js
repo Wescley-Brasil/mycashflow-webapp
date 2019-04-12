@@ -18,18 +18,19 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 //
-import DashboardIcon from '@material-ui/icons/Dashboard' 
-import AccountBalanceWallet from '@material-ui/icons/AccountBalanceWallet' 
-import MoneyOff from '@material-ui/icons/MoneyOff' 
-import Ballot from '@material-ui/icons/Ballot' 
-import Description from '@material-ui/icons/Description' 
-import AccountBalance from '@material-ui/icons/AccountBalance'
+import DashboardIcon from '@material-ui/icons/Dashboard'; 
+import AccountBalanceWallet from '@material-ui/icons/AccountBalanceWallet'; 
+import MoneyOff from '@material-ui/icons/MoneyOff'; 
+import Ballot from '@material-ui/icons/Ballot'; 
+import Description from '@material-ui/icons/Description';
+import AccountBalance from '@material-ui/icons/AccountBalance';
 
-/* import Overview from "./components/pages/Overwiew.js" */
 
-import * as Commons from "./components/commonsStyles.js" 
+import * as Commons from "./components/commonsStyles.js";
+//
+import Overview from "./components/pages/Overwiew.js" 
 import Spendings from './components/pages/Spendings.js';
-
+import ComingSoon from './components/pages/Spendings.js';
 
 class App extends React.Component {
 
@@ -48,6 +49,12 @@ class App extends React.Component {
     render() {
         
         const { classes, theme } = this.props;
+        const Pages = [
+            <Overview/>,
+            <Spendings />,
+            <ComingSoon />
+
+        ]
         const topToolBar = (
             <AppBar
             position="fixed"
@@ -118,7 +125,7 @@ class App extends React.Component {
         const content = (
             <main className={classes.content}>
                 <div className={classes.toolbar} />
-                <Spendings />
+                {Pages[0]}
             </main>
         );
         return (
