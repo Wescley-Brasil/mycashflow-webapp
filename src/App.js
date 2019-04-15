@@ -28,7 +28,8 @@ import AccountBalance from '@material-ui/icons/AccountBalance';
 
 import * as Commons from "./components/commonsStyles.js";
 //
-import Overview from "./components/pages/Overwiew.js" 
+import Overview from "./components/pages/Overwiew.js";
+import Bills from "./components/pages/Bills.js" 
 import Spendings from './components/pages/Spendings.js';
 import ComingSoon from './components/pages/Spendings.js';
 
@@ -52,6 +53,7 @@ class App extends React.Component {
         const Pages = [
             <Overview/>,
             <Spendings />,
+            <Bills />,
             <ComingSoon />
 
         ]
@@ -125,7 +127,7 @@ class App extends React.Component {
         const content = (
             <main className={classes.content}>
                 <div className={classes.toolbar} />
-                {Pages[0]}
+                {Pages[2]}
             </main>
         );
         return (
